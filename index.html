@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Fênix Car</title>
+    <link rel="icon" href="./images/logo web fênix.png" type="image/png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-page">
+            <h1>Fênix<span class="span-logo">Car</span></h1>
+            <ul class="header-page-menu">
+                <li class="contact-item"><a target="_blank"
+                        href="https://www.google.com/maps/place/Alameda+Araguaia,+933+-+Alphaville+Comercial,+Barueri+-+SP,+06455-000/@-23.497975,-46.8520603,17z/data=!3m1!4b1!4m6!3m5!1s0x94cf023adfdf709b:0xd383f7191b154191!8m2!3d-23.497975!4d-46.8520603!16s%2Fg%2F11c43s6m5_?entry=ttu">Endereço</a>
+                </li>
+                <li class="contact-item"><a target="_blank"
+                        href="https://www.instagram.com/fenix.car_guerra/">Instagram</a></li>
+                <li class="contact-item"><a target="" href="https://wa.me/message/JDYF47SVIGASN1">WhatsApp</a></li>
+            </ul>
+            <button class="menu-button" onclick="toggleContactItems()">Contatos</button>
+        </div>
+
+        <div class="hero">
+            <h2>O seu carro dos sonhos você consegue aqui...</h2>
+            <h3>Carros por assinatura!</h3>
+            <a href="#" class="btn" onclick="openAdvantagesModal()">Veja as vantagens</a>
+        </div>
+    </div>
+    <section class="cards">
+        <h2>Faça um tour pelos modelos!</h2>
+        <div class="cards-list">
+            <div class="card-item" data-card="hatchbacks" data-title="Hatchbacks"
+                data-description="Quer economia? Essa classe é pra você! Praticidade pro dia a dia!"
+                data-image="./images/Fiat_Argo_2017b_(cropped).jpg">
+                <img src="./images/polo apresentação (1).png" alt="Imagem do veículo fiat argo em coloração vermelha">
+                <h3>Hatchbacks</h3>
+                <p>Quer economia? Essa classe é pra você que quer praticidade pro dia a dia!</p>
+                <button class="btn" onclick="openVehicleModal('hatchbacks')">Veja Mais</button>
+            </div>
+            <div class="card-item" data-card="sedans" data-title="Sedans"
+                data-description="Estilo e beleza é o que não falta nessa categoria! Velocidade e prazer é seu lema."
+                data-image="./images/Nuevo Nissan Sentra 2024 Facelift.jpg">
+                <img src="./images/nissan sentra apresentação (2).png"
+                    alt="Imagem do Veicúlo Corlla Híbrido em coloração branca">
+                <h3>Sedans</h3>
+                <p>Estilo é o que não falta nessa categoria! Velocidade e prazer é seu lema.</p>
+                <button class="btn" onclick="openVehicleModal('sedans')">Veja Mais</button>
+            </div>
+            <div class="card-item" data-card="suvs" data-title="SUVs"
+                data-description="Suavidade é a palavra, tranquilidade para família com conforto incluso!"
+                data-image="./images/Jeep Compass Sport 1_3 2023.jpg">
+                <img src="./images/jeep compass apresentação.png" alt="Imagem do Jeep Compass em coloração cinza">
+                <h3>SUV´s</h3>
+                <p>Suavidade é a palavra, tranquilidade para família com conforto incluso!</p>
+                <button class="btn" onclick="openVehicleModal('suvs')">Veja Mais</button>
+            </div>
+            <div class="card-item" data-card="caminhonetes" data-title="Caminhonetes"
+                data-description="Utilidade e capacidade a definem! Uma boa carroceria e força são seus traços!"
+                data-image="./images/Chevrolet Montana 2023.jpg">
+                <img src="./images/montana apresentação (2).png"
+                    alt="Imagem do Veicúlo Chevrolet Montana em coloração cinza chumbo">
+                <h3>Caminhonetes</h3>
+                <p>Utilidade e capacidade a definem! Uma boa carroceria e força são seus traços!</p>
+                <button class="btn" onclick="openVehicleModal('caminhonetes')">Veja Mais</button>
+            </div>
+            <div class="card-item" data-card="eletricos" data-title="Elétricos"
+                data-description="Inovação e tecnologia! Pra você que ama se diferenciar e inovar essa é pra você!"
+                data-image="./images/BYD apresenta mais duas versões do Dolphin no Brasil.jpg">
+                <img src="./images/byd dolphin apresentação.png" alt="Imagem do Veicúlo BYD Dolphin em coloração preta">
+                <h3>Elétricos</h3>
+                <p>Inovação e tecnologia! Pra você que ama se diferenciar e inovar essa é pra você!</p>
+                <button class="btn" onclick="openVehicleModal('eletricos')">Veja Mais</button>
+            </div>
+            <div class="card-item" data-card="premium" data-title="Premium"
+                data-description="Luxo, Esportividade e glamour! A adrenalina que você precisa e o luxo que você merece!"
+                data-image="./images/Novo BMW Série 3 é revelado em Paris.jpg">
+                <img src="./images/bmw 218i apresentação.png" alt="Imagem do Veicúlo BMW 320i azul em uma estrada">
+                <h3>Premium</h3>
+                <p>Luxo, Esportividade e glamour! A adrenalina que você precisa e o luxo que você merece!</p>
+                <button class="btn" onclick="openVehicleModal('premium')">Veja Mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Vantagens -->
+    <div id="advantages-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAdvantagesModal()">&times;</span>
+            <h2>Vantagens de um Carro por Assinatura</h2>
+            <ul>
+                <li>✅ Condutor adicional grátis e carro reserva</li>
+                <li>✅ Toda documentação e IPVA</li>
+                <li>✅ Revisões gratuitas e assistência 24h</li>
+                <li>✅ Proteção garantida com seguros</li>
+            </ul>
+            <p>
+                Porque assinar um carro e não financiar?
+            </p>
+            <p>
+                Dentro de um financiamento os juros irão te sufocar e as parcelas durarão mais de 2 anos com certeza!
+                Além de gastos externos como seguro, IPVA, futuras manutenções, revisões e etc. Já no carro por
+                assinatura pagando uma mensalidade em que todos esses problemas não vão aparecer! Além de poder trocar
+                para um outro veículo ao finalizar o seu plano! Pense só, poder trocar de carro a cada ano! Sendo eles
+                apenas veículos dos anos mais atualizados do mercado! 🚗🌐
+            </p>
+            <p>
+                O plano Mínimo de meses é de 12 meses ✅ Tendo os planos de 48 meses, 36 meses, 30 meses, 24 meses, 18
+                meses e 12 meses. Quanto maior o plano, menor o valor da mensalidade!
+            </p>
+            <p>
+                Dentro desse plano também será necessário selecionar a quantidade de Km que você irá utilizar por mês:
+                1000KM, 1500KM, 2000KM. Caso você exceda a quilometragem escolhida há uma taxa por KM! Valor do km
+                excedente: R$ 0,60.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Modal de veículos -->
+    <div id="vehicle-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVehicleModal()">&times;</span>
+            <div class="vehicle-details">
+                <div class="arrow arrow-left" onclick="prevVehicle()">&#8249;</div>
+                <div class="vehicle-content">
+                    <h2 id="modal-title"></h2>
+                    <img id="modal-image" src="" alt="">
+                    <p id="modal-description"></p>
+                </div>
+                <div class="arrow arrow-right" onclick="nextVehicle()">&#8250;</div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2 class="logo-text"><span>Fênix</span>Car</h2>
+                <p>
+                    A Fênix Car oferece as melhores opções de veículos por assinatura, trazendo economia, conforto e
+                    praticidade para você. Venha conferir nossas ofertas!
+                </p>
+            </div>
+            <div class="footer-section links">
+                <h2>Links Rápidos</h2>
+                <ul>
+                    <li class="contact-item"><a target="_blank"
+                            href="https://www.google.com/maps/place/Alameda+Araguaia,+933+-+Alphaville+Comercial,+Barueri+-+SP,+06455-000/@-23.497975,-46.8520603,17z/data=!3m1!4b1!4m6!3m5!1s0x94cf023adfdf709b:0xd383f7191b154191!8m2!3d-23.497975!4d-46.8520603!16s%2Fg%2F11c43s6m5_?entry=ttu">Endereço</a>
+                    </li>
+                    <li class="contact-item"><a target="_blank"
+                            href="https://www.instagram.com/fenix.car_guerra/">Instagram</a></li>
+                    <li><a href="https://wa.me/message/JDYF47SVIGASN1" target="_blank">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contato</h2>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (11) 93752-2621</li>
+                    <li><i class="fas fa-envelope"></i> CNPJ: 50.220.231/0001-89</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Alameda Araguaia, 933, CEP 06455-000</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Fênix Car | Todos os direitos reservados
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            ScrollReveal().reveal('.header-page', {
+                duration: 1000,
+                origin: 'top',
+                distance: '50px'
+            });
+
+            ScrollReveal().reveal('.hero', {
+                duration: 1000,
+                origin: 'bottom',
+                distance: '50px',
+                reset: true
+            });
+
+            ScrollReveal().reveal('.cards-list .card-item', {
+                duration: 1000,
+                interval: 200,
+                origin: 'bottom',
+                distance: '50px',
+                reset: true
+            });
+
+            ScrollReveal().reveal('.footer-container', {
+                duration: 1000,
+                origin: 'bottom',
+                distance: '50px',
+                reset: true
+            });
+        });
+    </script>
+
+</body>
+<script>
+    function toggleContactItems() {
+        const headerPageMenu = document.querySelector('.header-page-menu');
+        headerPageMenu.classList.toggle('show-contact-items');
+    }
+</script>
+
+</html>
